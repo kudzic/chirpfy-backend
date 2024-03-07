@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "git@github.com:kudzic/twitter-clone-config.git"
+          force-pull: true
+          default-label: main
+          clone-on-start: true
+          username: kudzic
+          password: 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
+
+server:
+  port: 8000
+
+

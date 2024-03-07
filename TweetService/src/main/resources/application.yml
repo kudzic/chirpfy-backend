@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: "tweetservice"
+  config:
+    import: "optional:configserver:http://localhost:8000/"
+  data:
+    mongodb:
+      host: "localhost"
+      password: ""
+      database: "Twitter"
+      port: 27017
+
+
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+info:
+  app:
+    name: "Twitter tweet service"
+    description: "Twitter tweet service"
+    version: "1.0.0"
+
