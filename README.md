@@ -1,10 +1,10 @@
-Twitter Backend
+Chirp Backend
 
 1.User-Service: This microservice is responsible for handling user related issue including creation,updating and deleting user accounts. It also has the tweetService as its feign client this is done to make sure that only the owner of the user account
              should be able to send particular tweets and delete their own tweets
 
              
-2.TweetService: This is the microservice that is handling all the tweets related logic from creation, deletion ,liking ,retweets and bookmarks ,they are all done in the tweetservice
+2.ChirpService: This is the microservice that is handling all the tweets related logic from creation, deletion ,liking ,rechirps and bookmarks ,they are all done in the chirpservice
 
 
 3.GatewayServer: I used Spring Cloud Gateway Server as my edge server , this is managing all the external request and making sure that the request are authenticated using the Keycloak OpenIDConnect security protocols. It will also be used for security
