@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Document
 @AllArgsConstructor
@@ -23,6 +24,9 @@ public class User {
     private LocalDateTime accountCreatedOn;
     private List<User> followers;
     private List<User> follows;
+    private Set<Integer> likes;
+    private Set<Integer> bookmarks;
+    private Set<Integer> retweets;
 
 
 

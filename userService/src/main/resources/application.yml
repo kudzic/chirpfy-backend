@@ -20,9 +20,6 @@ management:
         include: "*"
 
 
-
-
-
 info:
   app:
     name: "Twitter user service"

@@ -10,4 +10,7 @@ public interface TweetFeignClient {
 
     @PostMapping("/api/tweet/addTweet")
     public String addTweet(@RequestBody TweetDto tweetDto);
+
+
+
 }

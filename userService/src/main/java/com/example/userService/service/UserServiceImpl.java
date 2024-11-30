@@ -37,14 +37,19 @@ public class UserServiceImpl implements UserService{
 
     }
 
-    public void addTweet(TweetDto tweetDto,String userId){
-        if(userRepository.existsById(userId)) {
-            User user = userRepository.findUserByUserId(userId);
-            tweetDto.user_id = user.getUserId();
-            tweetDto.full_name = user.getFirst_name() + " " + user.getLastName();
-            tweetDto.username = user.getUsername();
-            tweetFeignClient.addTweet(tweetDto);
+
+    public void addTweet(TweetDto tweetDto,String email){
+        if(userRepository.existsByEmail(email)) {
+            User userId = userRepository.findUserByEmail(email);
+            if (userRepository.existsById(userId.getUserId())) {
+                User user = userRepository.findUserByUserId(userId.getUserId());
+                tweetDto.user_id = user.getUserId();
+                tweetDto.full_name = user.getFirst_name() + " " + user.getLastName();
+                tweetDto.username = user.getUsername();
+                tweetFeignClient.addTweet(tweetDto);
+            }
         }
+
 
 
     }

@@ -18,14 +18,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/user")
+@CrossOrigin
 public class UserController {
     public final UserServiceImpl userService;
 
 
 
     @PostMapping("/addTweet")
-    public ResponseEntity<String> addTweet(@RequestBody TweetDto tweetDto,@RequestParam String userId){
-        userService.addTweet(tweetDto,userId);
+    public ResponseEntity<String> addTweet(@RequestBody TweetDto tweetDto,@RequestParam String email){
+        userService.addTweet(tweetDto,email);
        return ResponseEntity.ok("Tweet Added");
     }
 
