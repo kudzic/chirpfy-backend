@@ -14,7 +14,7 @@ public class UserMapper {
     public User userSignUpDtoToUser(UserRepresentation dto, User user){
         user.setUserId(dto.getId());
         user.setEmail(dto.getEmail());
-        user.setFirst_name(dto.getFirstName());
+        user.setFirstName(dto.getFirstName());
         user.setUsername(dto.getUsername());
         user.setLastName(dto.getLastName());
         user.setAccountCreatedOn(LocalDateTime.now());

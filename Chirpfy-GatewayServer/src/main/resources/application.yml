@@ -46,8 +46,12 @@ management:
       exposure:
         include: "*"
 
+
 info:
   app:
     name: "Twitter Gateway service"
     description: "Twitter Gateway service"
     version: "1.0.0"
+  metrics:
+    logs:
+      application: ${spring.application.name}

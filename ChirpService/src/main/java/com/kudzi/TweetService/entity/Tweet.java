@@ -28,7 +28,6 @@ public class Tweet {
     public ArrayList<Tweet> replies;
     public LocalDateTime timestamp;
     public String replied_id;
-
     public List<String> liked_userId=new ArrayList<>();
     public List<String> book_userId=new ArrayList<>();
 }

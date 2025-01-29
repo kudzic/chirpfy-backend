@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/principal")
 @Path("/api/principal")
-@CrossOrigin()
+@CrossOrigin(origins="http://localhost:5173")
 public class GatewayController {
 
  private KeyCloakUserServiceImpl keyCloakUserService;

@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService{
             if (userRepository.existsById(userId.getUserId())) {
                 User user = userRepository.findUserByUserId(userId.getUserId());
                 tweetDto.user_id = user.getUserId();
-                tweetDto.full_name = user.getFirst_name() + " " + user.getLastName();
+                tweetDto.full_name = user.getFirstName() + " " + user.getLastName();
                 tweetDto.username = user.getUsername();
                 tweetFeignClient.addTweet(tweetDto);
             }
